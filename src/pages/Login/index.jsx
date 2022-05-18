@@ -6,13 +6,12 @@ export const Login = () => {
   const [ password, setPassword ] = useState('')
 
   const handlelogin = (e) => {
-    
   }
 
   return (
     <div id="container-login">
       <h1 className="title">Bem vindo, faça seu Login</h1>
-      <form className="form">
+      <form onSubmit={handlelogin} className="form">
 
         <div className="field">
           <label htmlFor="email">Email: </label>

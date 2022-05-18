@@ -1,12 +1,8 @@
-import { Home } from "./pages/Home";
-import { Login } from "./pages/Login";
+import { AppRouter } from "./AppRoutes";
 
 function App() {
   return (
-    <>
-      <Login />
-      {/* <Home /> */}
-    </>
+      <AppRouter />
   );
 }
 
