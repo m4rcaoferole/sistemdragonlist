@@ -19,6 +19,10 @@ export const Home = () => {
     <div className="container-list">
       <h1>Tipos de Dragões</h1>
       <main className="drangon-container">
+        <header>
+          <div>The Dragons</div>
+          <button onClick={logout}>Sair</button>
+        </header>
         <div className="all-container">
           {dragons
             .map((dragon, index) => {
