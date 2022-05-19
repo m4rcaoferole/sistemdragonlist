@@ -23,6 +23,12 @@ export const RegistersDragon = () => {
     });
   }
 
+  function onSubmit(event) {
+   event.preventDefault();
+
+   console.log(values)
+  }
+
 
 
   return (
@@ -33,7 +39,7 @@ export const RegistersDragon = () => {
             <h1>Cadastrar Dragão</h1>
             <div className="line-register"></div>
             <div className="content-form">
-               <form className="">
+               <form onSubmit={onSubmit} className="">
                   <div className="fields">
                   <label htmlFor="name">Nome</label>
                   <input
@@ -65,7 +71,7 @@ export const RegistersDragon = () => {
                   />
                   </div>
                   <div className="btn-register">
-                  <button type="submit">Cadastrar</button>
+                  <button>Cadastrar</button>
                   </div>
                </form>
             </div>

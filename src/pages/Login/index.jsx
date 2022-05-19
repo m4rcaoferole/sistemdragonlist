@@ -1,22 +1,28 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../context/Auth";
 import "./styles.css";
 
-export const Login = () => {
-  const [email, setEmail] = useState("");
+
+export const UserLogin = () => {
+  const { login } = useContext(AuthContext)
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handlelogin = (e) => {};
+  const handlelogin = (e) => {
+    e.preventDefault();
+    login(username, password)
+  };
 
   return (
     <div id="container-login">
       <h1 className="title">Bem vindo, faça seu Login</h1>
       <form onSubmit={handlelogin} className="form">
         <div className="field">
-          <label htmlFor="email">Email: </label>
+          <label htmlFor="username">Usuário: </label>
           <input
-            type="email"
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
+            type="text"
+            onChange={(e) => setUsername(e.target.value)}
+            value={username}
             name="email"
             id="email"
           />
@@ -32,7 +38,7 @@ export const Login = () => {
           />
         </div>
         <div className="container-btn">
-          <button type="submit">LOGIN</button>
+          <button>LOGIN</button>
         </div>
       </form>
     </div>
