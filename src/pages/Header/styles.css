@@ -1,0 +1,10 @@
+.head-menu {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: black;
+   color: #fff;
+   width: 100%;
+   height: 40px;
+   padding: 0 2rem;
+ }

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { DragonsTypes } from "../../components/DragonsTypes";
+import { Header } from "../Header";
 
 import "../Home/styles.css";
 
@@ -16,28 +17,28 @@ export const Home = () => {
   }, []);
 
   return (
-    <div className="container-list">
-      <h1>Tipos de Dragões</h1>
-      <main className="drangon-container">
-        <header>
-          <div>The Dragons</div>
-          <button onClick={logout}>Sair</button>
-        </header>
-        <div className="all-container">
-          {dragons
-            .map((dragon, index) => {
-              return (
-                <DragonsTypes
-                  key={index}
-                  id={dragon.id}
-                  name={dragon.name}
-                  type={dragon.type}
-                  createdAt={dragon.createdAt}
-                />
-              );
-            })}
-        </div>
-      </main>
-    </div>
+    <>
+      <Header />
+      
+      <div className="container-list">
+        <main className="drangon-container">
+          <h1>Tipos de Dragões</h1>
+          <div className="all-container">
+            {dragons
+              .map((dragon, index) => {
+                return (
+                  <DragonsTypes
+                    key={index}
+                    id={dragon.id}
+                    name={dragon.name}
+                    type={dragon.type}
+                    createdAt={dragon.createdAt}
+                  />
+                );
+              })}
+          </div>
+        </main>
+      </div>
+    </>
   );
 }
