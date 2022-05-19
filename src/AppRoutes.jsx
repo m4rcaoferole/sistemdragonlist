@@ -22,7 +22,7 @@ export const AppRouter = () => {
         <Routes>
           <Route path="/login" element={<UserLogin />} />
           <Route path="/"  element={<Private><Home /></Private>} />
-          <Route path="/register" element={<Private><RegistersDragon /></Private>} />
+          <Route path="/register" element={<RegistersDragon />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>

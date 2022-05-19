@@ -19,12 +19,13 @@ export const Home = () => {
   return (
     <>
       <Header />
-      
+
       <div className="container-list">
         <main className="drangon-container">
           <h1>Tipos de Dragões</h1>
           <div className="all-container">
             {dragons
+              .sort((a, b) => a.name.localeCompare(b.name))
               .map((dragon, index) => {
                 return (
                   <DragonsTypes
@@ -41,4 +42,4 @@ export const Home = () => {
       </div>
     </>
   );
-}
+};

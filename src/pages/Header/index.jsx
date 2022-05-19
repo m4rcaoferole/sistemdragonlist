@@ -1,5 +1,7 @@
 import { useContext } from 'react'
 import { AuthContext } from '../../context/Auth'
+import { Link } from 'react-router-dom'
+
 import './styles.css'
 
 export const Header = () => {
@@ -10,9 +12,12 @@ export const Header = () => {
    }
 
    return (
-      <header className="head-menu">
-        <div>The Dragons</div>
-        <button onClick={handleLogout} >Sair</button>
+      <header>
+         <div className="head-menu">
+            <div>The Dragons</div>
+
+            <button onClick={handleLogout} >Sair</button>
+         </div>
       </header>
    )
 }

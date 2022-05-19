@@ -16,7 +16,6 @@ export const RegistersDragon = () => {
 
   function onChange(event) {
     const { value, name } = event.target;
-
     setValues({
       ...values,
       [name]: value,
@@ -25,11 +24,8 @@ export const RegistersDragon = () => {
 
   function onSubmit(event) {
    event.preventDefault();
-
    console.log(values)
   }
-
-
 
   return (
     <>
