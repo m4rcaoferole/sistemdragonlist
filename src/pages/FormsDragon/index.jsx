@@ -11,7 +11,7 @@ function initialState() {
   };
 }
 
-export const RegistersDragon = () => {
+export const FormsDragon = () => {
   const [values, setValues] = useState(initialState);
 
   function onChange(event) {

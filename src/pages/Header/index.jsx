@@ -16,7 +16,7 @@ export const Header = () => {
          <div className="head-menu">
             <div>The Dragons</div>
 
-            <button onClick={handleLogout} >Sair</button>
+            <button onClick={handleLogout} >Logout</button>
          </div>
       </header>
    )

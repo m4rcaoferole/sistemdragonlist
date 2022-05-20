@@ -10,6 +10,8 @@ export const UserLogin = () => {
 
   const handlelogin = (e) => {
     e.preventDefault();
+    console.log(username, "user")
+    console.log(password, "pass")
     login(username, password)
   };
 

@@ -3,7 +3,7 @@ import { DragonContext } from '../../context/DragonContext'
 import './styles.css'
 
 export const DragonsTypes = ({ id, name, type, createdAt }) => {
-  const { handleDelete } = useContext(DragonContext)
+  const { handleDelete, handleEdite } = useContext(DragonContext)
 
   return (
     <div>
@@ -14,7 +14,7 @@ export const DragonsTypes = ({ id, name, type, createdAt }) => {
           <small>{createdAt.slice(0, 10)}</small>
         </div>
       <div className="btn-actions">
-        <button >Alterar</button>
+        <button onClick={() => handleEdite(id)} >Alterar</button>
         <button onClick={() => handleDelete(id)} >Excluir</button>
       </div>
       </div>
