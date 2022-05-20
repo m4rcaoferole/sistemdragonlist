@@ -1,6 +1,9 @@
+import { useContext } from 'react'
+import { DragonContext } from '../../context/DragonContext'
 import './styles.css'
 
-export const DragonsTypes = ({ id, name, type, createdAt}) => {
+export const DragonsTypes = ({ id, name, type, createdAt }) => {
+  const { handleDelete } = useContext(DragonContext)
 
   return (
     <div>
@@ -12,7 +15,7 @@ export const DragonsTypes = ({ id, name, type, createdAt}) => {
         </div>
       <div className="btn-actions">
         <button >Alterar</button>
-        <button >Excluir</button>
+        <button onClick={() => handleDelete(id)} >Excluir</button>
       </div>
       </div>
     </div>
