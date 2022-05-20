@@ -26,6 +26,8 @@
 }
 
 .btn-actions button {
+  font-weight: bold;
+  border-radius: 5px;
   width: 60px;
   height: 25px;
 }
